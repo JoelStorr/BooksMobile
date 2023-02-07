@@ -20,3 +20,6 @@ export default function App() {
     );
   }
 }
+
+
+// TODO: YT Vid Progress: 40min

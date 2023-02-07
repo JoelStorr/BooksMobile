@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c51ed365-a5eb-4d87-a77f-d1ea232541dd" name="Changes" comment="Added Color style to App">
+    <list default="true" id="c51ed365-a5eb-4d87-a77f-d1ea232541dd" name="Changes" comment="Added Expo Apollo Package to Project">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675784172316</updated>
-      <workItem from="1675784173381" duration="1844000" />
+      <workItem from="1675784173381" duration="2396000" />
     </task>
     <task id="LOCAL-00001" summary="Added README file">
       <created>1675785425593</created>
@@ -108,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675785817450</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Expo Apollo Package to Project">
+      <created>1675792960887</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675792960887</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +139,7 @@
     <MESSAGE value="Added README file" />
     <MESSAGE value="Cleaned up starting screen." />
     <MESSAGE value="Added Color style to App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Color style to App" />
+    <MESSAGE value="Added Expo Apollo Package to Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Expo Apollo Package to Project" />
   </component>
 </project>
