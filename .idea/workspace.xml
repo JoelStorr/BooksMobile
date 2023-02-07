@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c51ed365-a5eb-4d87-a77f-d1ea232541dd" name="Changes" comment="Added README file">
+    <list default="true" id="c51ed365-a5eb-4d87-a77f-d1ea232541dd" name="Changes" comment="Added Color style to App">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/Colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Colors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/TabOneScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TabOneScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675784172316</updated>
-      <workItem from="1675784173381" duration="1483000" />
+      <workItem from="1675784173381" duration="1844000" />
     </task>
     <task id="LOCAL-00001" summary="Added README file">
       <created>1675785425593</created>
@@ -96,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675785425593</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cleaned up starting screen.">
+      <created>1675785750055</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675785750055</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Color style to App">
+      <created>1675785817450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675785817450</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +128,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added README file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README file" />
+    <MESSAGE value="Cleaned up starting screen." />
+    <MESSAGE value="Added Color style to App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Color style to App" />
   </component>
 </project>
