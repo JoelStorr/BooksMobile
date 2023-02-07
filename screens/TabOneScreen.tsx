@@ -1,10 +1,8 @@
-import { StyleSheet } from 'react-native';
+import {ActivityIndicator, StyleSheet} from 'react-native';
 
 import { Text, View } from '../components/Themed';
 
-import { gql } from "@apollo/client";
-
-
+import { gql, useQuery} from "@apollo/client";
 
 
 
@@ -45,9 +43,26 @@ const query = gql`
 
 
 export default function TabOneScreen() {
+
+  const { data, loading, error } = useQuery(query, {
+    variables:{
+      q: ""
+    }
+  });
+
+  console.log(data);
+  console.log(loading);
+  console.log(error);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello World</Text>
+      {loading && <ActivityIndicator color={"#fff"} />}
+      {error && (
+          <>
+            <Text>Error fetching Books</Text>
+            <Text>{error.message}</Text>
+          </>
+      )}
     </View>
   );
 }
@@ -67,4 +82,5 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+
 });
