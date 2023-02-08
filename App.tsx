@@ -38,4 +38,5 @@ export default function App() {
 }
 
 
-// TODO: YT Vid Progress: 40min
+// TODO: YT Vid Progress: 56min
+// TODO: Restart CLI  $ stepzen start

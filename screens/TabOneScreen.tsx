@@ -46,7 +46,7 @@ export default function TabOneScreen() {
 
   const { data, loading, error } = useQuery(query, {
     variables:{
-      q: ""
+      q: "React Native"
     }
   });
 
