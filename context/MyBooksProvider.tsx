@@ -1,7 +1,18 @@
 import {createContext, useContext, ReactNode, useState} from "react";
 
 
- const MyBooksContext = createContext({});
+
+type MyBooksContextType = {
+    onToggleSave: (book:Book) => void,
+    isBookSaved: (book:Book) => boolean,
+    savedBooks: Book[],
+}
+
+ const MyBooksContext = createContext<MyBooksContextType>({
+    onToggleSave: () => {},
+    isBookSaved: () => false,
+     savedBooks: [],
+ });
 
  type Props = {
      children: ReactNode,
@@ -28,7 +39,7 @@ const MyBooksProvider = ({ children }: Props) =>{
             //remove
             setSavedBooks(
                 (books) => books.filter(
-                    (savedBook)=> JSON.stringify(savedBook) !== JSON.stringify(book)
+                    (savedBook)=> !areBooksTheSame(savedBook, book)
                 )
             );
         }else{
@@ -40,7 +51,7 @@ const MyBooksProvider = ({ children }: Props) =>{
      }
 
     return(
-        <MyBooksContext.Provider value={{onToggleSave}} >
+        <MyBooksContext.Provider value={{onToggleSave, isBookSaved, savedBooks}} >
             {children}
         </MyBooksContext.Provider>
     )
