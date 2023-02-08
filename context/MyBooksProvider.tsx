@@ -3,13 +3,13 @@ import {createContext, useContext, ReactNode, useState} from "react";
 
 
 type MyBooksContextType = {
-    onToggleSave: (book:Book) => void,
+    onToggleSaved: (book:Book) => void,
     isBookSaved: (book:Book) => boolean,
     savedBooks: Book[],
 }
 
  const MyBooksContext = createContext<MyBooksContextType>({
-    onToggleSave: () => {},
+    onToggleSaved: () => {},
     isBookSaved: () => false,
      savedBooks: [],
  });
@@ -33,7 +33,7 @@ const MyBooksProvider = ({ children }: Props) =>{
              (savedBook)=> areBooksTheSame(savedBook, book)
          );
      }
-     const onToggleSave = (book: Book) =>{
+     const onToggleSaved = (book: Book) =>{
 
         if(isBookSaved(book)){
             //remove
@@ -51,7 +51,7 @@ const MyBooksProvider = ({ children }: Props) =>{
      }
 
     return(
-        <MyBooksContext.Provider value={{onToggleSave, isBookSaved, savedBooks}} >
+        <MyBooksContext.Provider value={{ onToggleSaved, isBookSaved, savedBooks}} >
             {children}
         </MyBooksContext.Provider>
     )
