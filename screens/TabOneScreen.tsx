@@ -49,6 +49,7 @@ const query = gql`
 export default function TabOneScreen() {
 
   const [search, setSearch] = useState('');
+  const [provider, setProvider ] = useState<"googleBooksSearch" | "openLibrarySearch">("googleBooksSearch")
 
   const [runQuery ,{ data, loading, error }] = useLazyQuery(query);
 
@@ -59,6 +60,7 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+
         <TextInput
             placeholder={"Search..."}
             style={styles.input}
@@ -70,6 +72,22 @@ export default function TabOneScreen() {
             onPress={()=>runQuery({variables: {q: search}})}
         />
       </View>
+
+
+      <View style={styles.tabs}>
+        <Text style={
+          provider === "googleBooksSearch" ? {fontWeight: 'bold', color: 'royalblue'} : {}
+        }
+        onPress={()=>setProvider("googleBooksSearch")}
+        >Google Books</Text>
+        <Text style={
+          provider === "openLibrarySearch" ? {fontWeight: 'bold', color: 'royalblue'} : {}
+        }
+        onPress={()=> setProvider("openLibrarySearch")}
+        >Open Library</Text>
+      </View>
+
+
       {loading && <ActivityIndicator color={"#fff"} />}
       {error && (
           <>
@@ -118,6 +136,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     marginVertical: 5,
+  },
+  tabs:{
+    flexDirection: "row",
+    justifyContent: "space-around",
+    height: 50,
+    alignItems: "center"
   }
 
 });
