@@ -1,6 +1,7 @@
-import {ActivityIndicator, StyleSheet, FlatList, TextInput, Button} from 'react-native';
+import {useState} from "react";
+import {ActivityIndicator, StyleSheet, FlatList, Button, TextInput} from 'react-native';
 
-import { Text, View } from '../components/Themed';
+import { View, Text,  } from '../components/Themed';
 
 //NOTE: The useLazyQuery can be triggered based on a user input (Button Press)
 // where the useQuery is run directly
@@ -8,7 +9,7 @@ import { Text, View } from '../components/Themed';
 import { gql, useQuery, useLazyQuery} from "@apollo/client";
 
 import BookItem from "../components/BookItem";
-import {useState} from "react";
+
 
 const query = gql`
   query SearchBooks($q: String) {

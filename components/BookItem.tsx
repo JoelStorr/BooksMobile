@@ -1,5 +1,6 @@
-import {View, Text, StyleSheet, Image, Pressable} from "react-native";
+import { StyleSheet, Image, Pressable} from "react-native";
 import React from "react";
+import {Text, View} from "./Themed";
 import {useMyBooks} from "../context/MyBooksProvider";
 import Colors from "../constants/Colors";
 
