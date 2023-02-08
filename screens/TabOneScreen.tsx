@@ -2,9 +2,13 @@ import {ActivityIndicator, StyleSheet, FlatList, TextInput, Button} from 'react-
 
 import { Text, View } from '../components/Themed';
 
-import { gql, useQuery} from "@apollo/client";
+//NOTE: The useLazyQuery can be triggered based on a user input (Button Press)
+// where the useQuery is run directly
+
+import { gql, useQuery, useLazyQuery} from "@apollo/client";
 
 import BookItem from "../components/BookItem";
+import {useState} from "react";
 
 const query = gql`
   query SearchBooks($q: String) {
@@ -44,11 +48,9 @@ const query = gql`
 
 export default function TabOneScreen() {
 
-  const { data, loading, error } = useQuery(query, {
-    variables:{
-      q: "React Native"
-    }
-  });
+  const [search, setSearch] = useState('');
+
+  const [runQuery ,{ data, loading, error }] = useLazyQuery(query);
 
   console.log(data);
   console.log(loading);
@@ -57,8 +59,16 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TextInput placeholder={"Search..."} style={styles.input}/>
-        <Button title={'Search'}/>
+        <TextInput
+            placeholder={"Search..."}
+            style={styles.input}
+            value={search}
+            onChangeText={setSearch}
+        />
+        <Button
+            title={'Search'}
+            onPress={()=>runQuery({variables: {q: search}})}
+        />
       </View>
       {loading && <ActivityIndicator color={"#fff"} />}
       {error && (
@@ -75,7 +85,7 @@ export default function TabOneScreen() {
                 image:item.volumeInfo.imageLinks?.thumbnail,
                 title: item.volumeInfo.title,
                 authors: item.volumeInfo.authors,
-                isbn: item.volumeInfo.industryIdentifires,
+                isbn: item.volumeInfo.industryIdentifiers?.[0].identifier,
               }} />
           )}
       />
