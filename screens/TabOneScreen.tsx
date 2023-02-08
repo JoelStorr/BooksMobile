@@ -1,4 +1,4 @@
-import {ActivityIndicator, StyleSheet, FlatList} from 'react-native';
+import {ActivityIndicator, StyleSheet, FlatList, TextInput, Button} from 'react-native';
 
 import { Text, View } from '../components/Themed';
 
@@ -56,6 +56,10 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <TextInput placeholder={"Search..."} style={styles.input}/>
+        <Button title={'Search'}/>
+      </View>
       {loading && <ActivityIndicator color={"#fff"} />}
       {error && (
           <>
@@ -93,5 +97,17 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  header:{
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  input:{
+    flex: 1,
+    borderWidth: 1,
+    borderColor: "gainsboro",
+    borderRadius: 5,
+    padding: 10,
+    marginVertical: 5,
+  }
 
 });
