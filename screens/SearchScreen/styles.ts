@@ -18,7 +18,10 @@ export default StyleSheet.create({
     header:{
         flexDirection: "row",
         alignItems: "center",
+
+
     },
+
     input:{
         flex: 1,
         borderWidth: 1,
@@ -26,6 +29,7 @@ export default StyleSheet.create({
         borderRadius: 5,
         padding: 10,
         marginVertical: 5,
+        marginRight: 15,
     },
     tabs:{
         flexDirection: "row",
