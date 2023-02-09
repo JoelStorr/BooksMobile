@@ -6,7 +6,7 @@ import { View, Text,  } from '../components/Themed';
 //NOTE: The useLazyQuery can be triggered based on a user input (Button Press)
 // where the useQuery is run directly
 
-import { gql, useQuery, useLazyQuery} from "@apollo/client";
+import { gql, useLazyQuery} from "@apollo/client";
 
 import BookItem from "../components/BookItem";
 
@@ -47,7 +47,7 @@ const query = gql`
 
 
 
-export default function TabOneScreen() {
+export default function SearchScreen() {
 
   const [search, setSearch] = useState('');
   const [provider, setProvider ] = useState<"googleBooksSearch" | "openLibrarySearch">("googleBooksSearch")

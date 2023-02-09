@@ -8,15 +8,15 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
+import { ColorSchemeName } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import SearchScreen from '../screens/Search.screen';
+import MyBooksScreen from '../screens/MyBooks.screen';
+import { RootStackParamList, RootTabParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -64,14 +64,14 @@ function BottomTabNavigator() {
       }}>
       <BottomTab.Screen
         name="Search"
-        component={TabOneScreen}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="search" color={color} />,
        }}
       />
       <BottomTab.Screen
         name="My Books"
-        component={TabTwoScreen}
+        component={MyBooksScreen}
         options={{
 
           tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
