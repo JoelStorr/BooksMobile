@@ -2,8 +2,8 @@
 
 [BooksMobile](https://www.youtube.com/live/-qAhg4EDIwQ?feature=share) is a tutorial Project done on a live stream by [notJust.dv](https://www.youtube.com/@notjustdev).
 
-The App uses React Native with the Google Books API and the Open Library api to allow users to search books and to add them to their own bookshelf.
-For the Management of the Search Query we used [StepZen](https://stepzen.com/) to combine bothe APIs into one request as well as return.
+The App uses React Native with the Google Books API and the Open Library API to allow users to search for books and to add them to their own bookshelf.
+For the Management of the Search Query we used [StepZen](https://stepzen.com/) to combine both APIs into one request and return.
 
 ### Features Build
  - Search Screen
