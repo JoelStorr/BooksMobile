@@ -4,6 +4,9 @@
 
 The App uses React Native with the Google Books API and the Open Library api to allow users to search books and to add them to their own bookshelf.
 
-![Image](assets/images/DocsImage/SearchScreen.PNG "Hello World" |300)
 
-<img src="./assets/images/DocsImage/SearchScreen.PNG" width="350" title="Search Screen" alt="Search Screen">
+<p align="center">
+    <img src="./assets/images/DocsImage/SearchScreen.PNG" width="350" title="Search Screen" alt="Search Screen">
+    <img src="./assets/images/DocsImage/MyBooks.PNG" width="350" title="My Books Screen" alt="My Books Screen">
+
+</p>
