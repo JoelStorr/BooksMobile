@@ -4,4 +4,4 @@
 
 The App uses React Native with the Google Books API and the Open Library api to allow users to search books and to add them to their own bookshelf.
 
-![Image](assets/images/DocsImage/SearchScreen.PNG "Hello World")
+![Image](assets/images/DocsImage/SearchScreen.PNG "Hello World" |300)
