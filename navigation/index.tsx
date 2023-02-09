@@ -14,7 +14,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import SearchScreen from '../screens/Search.screen';
+import SearchScreen from '../screens/SearchScreen/Search.screen';
 import MyBooksScreen from '../screens/MyBooks.screen';
 import { RootStackParamList, RootTabParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
